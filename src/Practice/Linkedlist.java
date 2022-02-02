@@ -107,56 +107,39 @@ public class Linkedlist {
         Scanner sc=new Scanner(System.in);
         Node n1;
         SinglyLinkedList l=new SinglyLinkedList();
-        char ch='y';
+        char ch;
         int a,p;
         do {
             System.out.print("\nMain : \n1.Insert New Node at Beginning \n2.Insert New Node at Last \n3.Insert New Node at Position P \n4.Delete Node from Begininning \n5.Delete Node from Last \n6.Delete Node of Position P \n7.Display the List \n8.Exit \n\nEnter your choice here : ");
             a=sc.nextInt();
-            switch(a){
-                case 1 :
+            switch (a) {
+                case 1 -> {
                     System.out.print("\nenter the no. : ");
-                    n1=new Node(sc.nextInt());
+                    n1 = new Node(sc.nextInt());
                     l.insertAtBeginning(n1);
-                    break;
-
-                case 2 :
+                }
+                case 2 -> {
                     System.out.print("\nenter the no. : ");
-                    n1=new Node(sc.nextInt());
+                    n1 = new Node(sc.nextInt());
                     l.insertAtLast(n1);
-                    break;
-
-                case 3 :
+                }
+                case 3 -> {
                     System.out.print("\nenter the no. : ");
-                    n1=new Node(sc.nextInt());
+                    n1 = new Node(sc.nextInt());
                     System.out.print("\nenter the position : ");
-                    p=sc.nextInt();
-                    l.insertAtPosition(p,n1);
-                    break;
-
-                case 4 :
-                    l.deletefrombeginning();
-                    break;
-
-                case 5 :
-                    l.deletefromlast();
-                    break;
-
-                case 6 :
+                    p = sc.nextInt();
+                    l.insertAtPosition(p, n1);
+                }
+                case 4 -> l.deletefrombeginning();
+                case 5 -> l.deletefromlast();
+                case 6 -> {
                     System.out.print("\nenter the position : ");
-                    p=sc.nextInt();
+                    p = sc.nextInt();
                     l.deletefromPosition(p);
-                    break;
-
-                case 7 :
-                    l.display();
-                    break;
-
-                case 8 :
-                    exit(0);
-
-                default:
-                    System.out.println("Please enter valid no. ");
-
+                }
+                case 7 -> l.display();
+                case 8 -> exit(0);
+                default -> System.out.println("Please enter valid no. ");
             }
             System.out.print("\ndo you want to continue y/n : ");
             ch=sc.next().charAt(0);
