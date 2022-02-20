@@ -1,3 +1,4 @@
+//circular queue by array
 package Practice;
 import java.util.*;
 class CircularQueueArray{
@@ -6,6 +7,7 @@ class CircularQueueArray{
         arr=new int[size];
         this.size=size;
         front=rear=-1;
+
     }
     public Boolean isempty(){
         if(front==-1)
